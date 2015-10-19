@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <title>Convertidor de temperatura - Práctica 2</title>
+  </head>
+  <body background="fondo.jpg">
+  <br>
+    <div class="jumbotron">
+      <h1>Convertidor de temperatura</h1>
+      <br>
+      <h3>Sistemas y tecnologías web </h3> <h4>Juan Ignacio Hita Manso </h4>
+    </div>
+    <br>
+    <div class="jumbotron1">
+    <div class="posicion">
+      <div class="input-group">
+        <input id="temp" type="number" class="form-control" aria-label="...">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle"
+ data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Elegir opción </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a onclick="convertir('CF');">Celsius a Fahrenheit</a></li>
+          <li><a onclick="convertir('FC');">Fahrenheit a Celsius</a></li>
+          <li><a onclick="convertir('CK');">Celsius a Kelvin</a></li>
+          <li><a onclick="convertir('KC');">Kelvin a Celsius</a></li>
+          <li><a onclick="convertir('FK');">Fahrenheit a Kelvin</a></li>
+          <li><a onclick="convertir('KF');">Kelvin a Fahrenheit</a></li>
+      </ul>
+      </div>
+    </div>
+		<br>
+	  <td>
+      <div class="resultado2">
+		      <span class="output" id="divsalida">
+		      </span>
+      </div>
+
+			  <h4><a href="tests/index.html">Tests</h4> ---
+        <h4><a href="minified/index.html">Minified</h4>
+      </div>
+    </div>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/temperature.js"></script>
+	</body>
+</html>
