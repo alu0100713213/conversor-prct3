@@ -9,6 +9,7 @@ describe("Conversor Temperatura", function() {
   });
 
   afterEach(function() {
+    // restore the environment as it was before
     sandbox.restore();
   });
 
