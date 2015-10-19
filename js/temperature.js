@@ -26,7 +26,7 @@
       return ext + " Kelvin";
     }
   }
-  
+
   function Fahrenheit(valor)
   {
     Temperatura.call(this, valor);
@@ -42,7 +42,7 @@
       return ext + " Kelvin";
     }
   }
-  
+
   function Kelvin(valor)
   {
     Temperatura.call(this, valor);
@@ -58,12 +58,12 @@
       return ext1 + " Fahrenheit";
     }
   }
-  
+
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Kelvin = Kelvin;
   exports.Fahrenheit = Fahrenheit;
-  
+
   exports.convertir = function(tipo)
   {
     var valor     = document.getElementById('temp').value;
