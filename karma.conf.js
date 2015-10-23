@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha','chai'],
+    frameworks: ['mocha'],
     client: {
     mocha: {
     ui: 'bdd'
@@ -25,7 +25,7 @@ module.exports = function(config) {
 
 
     // list of files to exclude
-    exclude: [ 
+    exclude: [
     'gulpfile.js',
     'static-server.js'
     ],
@@ -34,8 +34,6 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    'tests/test_blanket.html': ['html2js'],
-    'tests/test.html': ['html2js']
     },
 
 
