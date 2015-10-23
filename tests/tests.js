@@ -48,7 +48,7 @@ describe("Conversor Temperatura", function() {
   });
   describe("Logs", function() {
 
-    it("Console.log() - Debe haber un log para el metodo toCelsius()", function() {
+    it("Console.log() - Metodo toCelsius()", function() {
          var log = (new Fahrenheit(32).toCelsius());
     //     sinon.assert.notCalled(console.error);
   //       sinon.assert.calledOnce(console.log);
