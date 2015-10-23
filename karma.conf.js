@@ -10,25 +10,32 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
-
-
+    frameworks: ['mocha','chai'],
+    client: {
+    mocha: {
+    ui: 'bdd'
+    }
+    },
     // list of files / patterns to load in the browser
     files: [
-      'test/test.js',
-      'tests/test.js',
+      'tests/index.html',
+      '*.js',
       'tests/tests.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
+    exclude: [ 
+    'gulpfile.js',
+    'static-server.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+    'tests/test_blanket.html': ['html2js'],
+    'tests/test.html': ['html2js']
     },
 
 
