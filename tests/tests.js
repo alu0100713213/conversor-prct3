@@ -1,8 +1,8 @@
+var assert = sinon.assert;
 var expect = chai.expect;
+
 describe("Conversor Temperatura", function() {
-
   var sandbox;
-
   beforeEach(function() {
     sandbox = sinon.sandbox.create();
     sandbox.stub(window.console, "log");
@@ -15,6 +15,7 @@ describe("Conversor Temperatura", function() {
   });
 
  var aux = document.getElementById("salida");
+
     it("Constructor Temperatura", function(){
       var Temp = new Temperatura("0");
       Temp.tempValue = 0;
@@ -45,3 +46,27 @@ describe("Conversor Temperatura", function() {
       expect(Temp.toFahrenheit()).to.equal("170.33000000000004 Fahrenheit");
     });
   });
+  describe("Logs", function() {
+
+    it("Console.log() - Debe haber un log para el metodo toCelsius()", function() {
+         var log = (new Fahrenheit(32).toCelsius());
+    //     sinon.assert.notCalled(console.error);
+  //       sinon.assert.calledOnce(console.log);
+//         sinon.assert.calledWithExactly(console.log, "Dato convertido 0 Celsius");
+       });
+    it('1st example using a spy', function () {
+        logger = {
+            log: sinon.spy()
+        };
+        var greetings = moduleA.greet('James', logger);
+
+        expect(logger.log).to.have.been.calledOnce;
+        expect(logger.log).to.have.been.calledWith('Greeting: James');
+
+        // Verify the method returns the expected result
+        expect(greetings).to.equal('Hello James');
+
+        // Reset the spy so that this test does not affect other tests.
+        logger.log.reset();
+      });
+});

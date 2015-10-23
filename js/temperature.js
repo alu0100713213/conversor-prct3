@@ -1,3 +1,18 @@
+var w;
+function startWorker(valor) {
+    //alert("el valor es:"+valor);
+    if(typeof(Worker) !== "undefined") { // check whether the user's browser supports Web Workers
+        if(typeof(w) == "undefined") {   // checks if the worker already exists
+          convertir(valor);
+        }
+        w.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Lo sentimos, su explorador no acepta Web Workers";
+    }
+}
+
 (function(exports) {
   "use strict";
 
@@ -26,7 +41,7 @@
       return ext + " Kelvin";
     }
   }
-  
+
   function Fahrenheit(valor)
   {
     Temperatura.call(this, valor);
@@ -42,7 +57,7 @@
       return ext + " Kelvin";
     }
   }
-  
+
   function Kelvin(valor)
   {
     Temperatura.call(this, valor);
@@ -58,12 +73,12 @@
       return ext1 + " Fahrenheit";
     }
   }
-  
+
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Kelvin = Kelvin;
   exports.Fahrenheit = Fahrenheit;
-  
+
   exports.convertir = function(tipo)
   {
     var valor     = document.getElementById('temp').value;

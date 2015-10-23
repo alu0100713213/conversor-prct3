@@ -8,6 +8,7 @@
     <link href="css/global.css" rel="stylesheet">
     <title>Convertidor de temperatura - Práctica 2</title>
   </head>
+
   <body background="fondo.jpg">
   <br>
     <div class="jumbotron">
@@ -22,14 +23,15 @@
         <input id="temp" type="number" class="form-control" aria-label="...">
         <div class="input-group-btn">
           <button type="button" class="btn btn-default dropdown-toggle"
- data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Elegir opción </button>
-        <ul class="dropdown-menu dropdown-menu-right">
-          <li><a onclick="convertir('CF');">Celsius a Fahrenheit</a></li>
-          <li><a onclick="convertir('FC');">Fahrenheit a Celsius</a></li>
-          <li><a onclick="convertir('CK');">Celsius a Kelvin</a></li>
-          <li><a onclick="convertir('KC');">Kelvin a Celsius</a></li>
-          <li><a onclick="convertir('FK');">Fahrenheit a Kelvin</a></li>
-          <li><a onclick="convertir('KF');">Kelvin a Fahrenheit</a></li>
+ data-toggle="dropdown">Elegir opción
+       <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a onclick="startWorker('CF');">Celsius a Fahrenheit</a></li>
+          <li><a onclick="startWorker('FC');">Fahrenheit a Celsius</a></li>
+          <li><a onclick="startWorker('CK');">Celsius a Kelvin</a></li>
+          <li><a onclick="startWorker('KC');">Kelvin a Celsius</a></li>
+          <li><a onclick="startWorker('FK');">Fahrenheit a Kelvin</a></li>
+          <li><a onclick="startWorker('KF');">Kelvin a Fahrenheit</a></li>
       </ul>
       </div>
     </div>
@@ -40,11 +42,21 @@
 		      </span>
       </div>
 
+<<<<<<< HEAD
 			  <h4><a href="tests/index.html">Test</h4> ---
         <h4><a href="minified/index.html">Minified</h4>
       </div>
+=======
+	    <h4><a href="tests/index.html">Tests</h4></a> ---
+      <h4><a href="tests/test_blanket.html">Blanket</h4></a> ---
+      <h4><a href="minified/index.html">Minified</h4></a>
+      <br>
+>>>>>>> master
     </div>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <div id="result"></div>
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/temperature.js"></script>
 	</body>
