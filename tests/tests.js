@@ -46,27 +46,23 @@ describe("Conversor Temperatura", function() {
       expect(Temp.toFahrenheit()).to.equal("170.33000000000004 Fahrenheit");
     });
   });
-  describe("Logs", function() {
+  describe("Tests Sinon", function(){
+  	var sandbox;
 
-    it("Console.log() - Metodo toCelsius()", function() {
-         var log = (new Fahrenheit(32).toCelsius());
-    //     sinon.assert.notCalled(console.error);
-  //       sinon.assert.calledOnce(console.log);
-//         sinon.assert.calledWithExactly(console.log, "Dato convertido 0 Celsius");
-       });
-    it('1st example using a spy', function () {
-        logger = {
-            log: sinon.spy()
-        };
-        var greetings = moduleA.greet('James', logger);
+  	beforeEach(function(){
+  		sandbox = sinon.sandbox.create();
+  		sandbox.stub(window.console, "log");
+  		sandbox.stub(window.console, "error");
+  	});
 
-        expect(logger.log).to.have.been.calledOnce;
-        expect(logger.log).to.have.been.calledWith('Greeting: James');
+  	afterEach(function(){
+  		sandbox.restore();
+  	});
 
-        // Verify the method returns the expected result
-        expect(greetings).to.equal('Hello James');
-
-        // Reset the spy so that this test does not affect other tests.
-        logger.log.reset();
-      });
-});
+  	describe("generar errores", function(){
+  			it("Error si se le pasa una cadena", function(){
+          var Temp = new Celsius(20);
+  				sinon.assert.notCalled(console.error);
+  		});
+  	});
+  });
