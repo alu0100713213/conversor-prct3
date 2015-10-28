@@ -1,4 +1,4 @@
-var assert = sinon.assert;
+var assert = chai.assert;
 var expect = chai.expect;
 
 describe("Conversor Temperatura", function() {

@@ -11,10 +11,11 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha'],
+
     client: {
-    mocha: {
-    ui: 'bdd'
-    }
+          mocha: {
+            ui: 'bdd'
+          }
     },
     // list of files / patterns to load in the browser
     files: [
