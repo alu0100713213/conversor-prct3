@@ -10,5 +10,3 @@ before_install:
 branches:
   only:
     - master
-script:
-    - ./node_modules/karma/bin/karma start --single-run
