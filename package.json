@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "test": "karma test"
+    "test": "karma start"
   },
   "author": "",
   "license": "BSD-2-Clause"
