@@ -28,7 +28,8 @@
     "karma": "~0.13.14",
     "karma-firefox-launcher": "~0.1.6",
     "karma-mocha": "~0.2.0",
-    "karma-chai": "~0.1.0"
+    "karma-chai": "~0.1.0",
+    "test": "~0.6.0"
   },
   "config": {
     "blanket": {
@@ -42,7 +43,7 @@
     }
   },
   "scripts": {
-    "test": "tests/tests.js"
+    "test": "karma test"
   },
   "author": "",
   "license": "BSD-2-Clause"

@@ -1,6 +1,18 @@
 var assert = chai.assert;
 var expect = chai.expect;
 
+var sandbox;
+
+beforeEach(function() {
+	sandbox = sinon.sandbox.create();
+	sandbox.stub(window.console, "log");
+	sandbox.stub(window.console, "error");
+});
+
+afterEach(function() {
+	sandbox.restore();
+});
+
 describe('Conversor Temperatura', function() {
 
  var aux = document.getElementById("salida");
