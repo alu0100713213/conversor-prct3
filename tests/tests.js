@@ -1,18 +1,7 @@
 var assert = chai.assert;
 var expect = chai.expect;
 
-describe("Conversor Temperatura", function() {
-  var sandbox;
-  beforeEach(function() {
-    sandbox = sinon.sandbox.create();
-    sandbox.stub(window.console, "log");
-    sandbox.stub(window.console, "error");
-  });
-
-  afterEach(function() {
-    // restore the environment as it was before
-    sandbox.restore();
-  });
+describe('Conversor Temperatura', function() {
 
  var aux = document.getElementById("salida");
 
@@ -45,24 +34,6 @@ describe("Conversor Temperatura", function() {
       var Temp = new Kelvin("350");
       expect(Temp.toFahrenheit()).to.equal("170.33000000000004 Fahrenheit");
     });
+
   });
-  describe("Tests Sinon", function(){
-  	var sandbox;
 
-  	beforeEach(function(){
-  		sandbox = sinon.sandbox.create();
-  		sandbox.stub(window.console, "log");
-  		sandbox.stub(window.console, "error");
-  	});
-
-  	afterEach(function(){
-  		sandbox.restore();
-  	});
-
-  	describe("generar errores", function(){
-  			it("Error si se le pasa una cadena", function(){
-          var Temp = new Celsius(20);
-  				sinon.assert.notCalled(console.error);
-  		});
-  	});
-  });
