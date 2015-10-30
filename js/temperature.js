@@ -73,7 +73,16 @@ function startWorker(valor) {
       return ext1 + " Fahrenheit";
     }
   }
+  function getValor()
+  {
+    return Temperatura.valor;
+  }
 
+  function setValor(valor)
+  {
+    Temperatura.valor = valor;
+  }
+  
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Kelvin = Kelvin;
