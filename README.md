@@ -16,7 +16,7 @@ Guión de la práctica
 
 Karma
 
-<img src="http://alu0100713213.github.io/conversor-prct3/img/karma.jpg" alt="Karma" height="100" width="500"> 
+<img src="http://alu0100713213.github.io/conversor-prct3/img/karma.jpg" alt="Karma" height="240" width="600"> 
 
 Enlaces de Interes
 --------------------
