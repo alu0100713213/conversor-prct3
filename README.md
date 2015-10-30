@@ -13,3 +13,16 @@ Guión de la práctica
 > Use Travis para la integración contínua. Inserte el badge de Travis en su README.md
 
 > Comparta los enlaces en la Comunidad**
+
+Karma
+
+![Alt text](http://alu0100713213.github.io/conversor-prct3/img/karma.jpg "Karma")
+
+Enlaces de Interes
+--------------------
+
+Página donde se despliega la aplicación
+http://alu0100713213.github.io/conversor-prct3/
+
+Travis
+https://travis-ci.org/alu0100713213/conversor-prct3
