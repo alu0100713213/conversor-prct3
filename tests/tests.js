@@ -49,3 +49,19 @@ describe('Conversor Temperatura', function() {
 
   });
 
+	describe("Test de Sinon", function() {
+	        it("Debería mostrar un error si se pasa nada", function() {
+	            new Temp = Temperatura();
+	            sinon.assert.notCalled(console.error);
+	            sinon.assert.calledOnce(console.log);
+	            sinon.assert.calledWithExactly(console.log,"temperatura");
+
+	        });
+	        it("Medida", function() {
+	            new Medida();
+	            sinon.assert.notCalled(console.error);
+	            sinon.assert.calledOnce(console.log);
+	            sinon.assert.calledWithExactly(console.log,"medida");
+	        });
+
+	    });

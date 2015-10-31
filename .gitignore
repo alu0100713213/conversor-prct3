@@ -1,2 +1,4 @@
 node_modules
 *~
+static-server.js
+gulpfile.js
