@@ -1,17 +1,6 @@
 var assert = chai.assert;
 var expect = chai.expect;
 
-var sandbox;
-
-beforeEach(function() {
-	sandbox = sinon.sandbox.create();
-	sandbox.stub(window.console, "log");
-	sandbox.stub(window.console, "error");
-});
-
-afterEach(function() {
-	sandbox.restore();
-});
 
 describe('Conversor Temperatura', function() {
 
@@ -49,19 +38,44 @@ describe('Conversor Temperatura', function() {
 
   });
 
-	describe("Test de Sinon", function() {
-	        it("Debería mostrar un error si se pasa nada", function() {
-	            new Temp = Temperatura();
-	            sinon.assert.notCalled(console.error);
-	            sinon.assert.calledOnce(console.log);
-	            sinon.assert.calledWithExactly(console.log,"temperatura");
+	var sandbox;
 
-	        });
-	        it("Medida", function() {
-	            new Medida();
-	            sinon.assert.notCalled(console.error);
-	            sinon.assert.calledOnce(console.log);
-	            sinon.assert.calledWithExactly(console.log,"medida");
-	        });
+	beforeEach(function() {
+		sandbox = sinon.sandbox.create();
+		sandbox.stub(window.console, "log");
+		sandbox.stub(window.console, "error");
+	});
 
-	    });
+	afterEach(function() {
+		sandbox.restore();
+	});
+
+	describe("Test usando Sinon", function(){
+				it("Test de conversión correcta C to F", function(){
+					var Temp = new Celsius("25");
+					var aux = Temp.toFahrenheit();
+					sinon.assert.notCalled(console.error);
+					sinon.assert.calledWithExactly(console.log, "Conversión correcta");
+				});
+
+				it("Test de conversión correcta F to C", function(){
+					var Temp = new Fahrenheit("158");
+					var aux = Temp.toCelsius();
+					sinon.assert.notCalled(console.error);
+					sinon.assert.calledWithExactly(console.log, "Conversión correcta");
+				});
+
+					it("Test de conversión correcta K to F", function(){
+						var Temp = new Kelvin("573");
+						var aux = Temp.toFahrenheit();
+						sinon.assert.notCalled(console.error);
+						sinon.assert.calledWithExactly(console.log, "Conversión correcta");
+					});
+
+					it("Test de conversión correcta F to K", function(){
+						var Temp = new Fahrenheit("198");
+						var aux = Temp.toKelvin();
+						sinon.assert.notCalled(console.error);
+						sinon.assert.calledWithExactly(console.log, "Conversión correcta");
+					});
+			});

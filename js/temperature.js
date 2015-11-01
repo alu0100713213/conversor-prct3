@@ -1,18 +1,3 @@
-var w;
-function startWorker(valor) {
-    //alert("el valor es:"+valor);
-    if(typeof(Worker) !== "undefined") { // check whether the user's browser supports Web Workers
-        if(typeof(w) == "undefined") {   // checks if the worker already exists
-          convertir(valor);
-        }
-        w.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
-        };
-    } else {
-        document.getElementById("result").innerHTML = "Lo sentimos, su explorador no acepta Web Workers";
-    }
-}
-
 (function(exports) {
   "use strict";
 
@@ -32,12 +17,14 @@ function startWorker(valor) {
     this.toFahrenheit = function()
     {
       var ext = (valor * 9/5) + 32;
+      console.log("Conversión correcta");
       return ext + " " + "Fahrenheit";
     }
     this.toKelvin = function()
     {
       var parse = parseInt(valor);
       var ext = parse + 273.15;
+      console.log("Conversión correcta");
       return ext + " Kelvin";
     }
   }
@@ -48,12 +35,14 @@ function startWorker(valor) {
     this.toCelsius = function()
     {
       var ext = (valor - 32)/1.8;
+      console.log("Conversión correcta");
       return ext + " Celsius";
     }
     this.toKelvin = function()
     {
       var ext1 = (valor - 32)/1.8;
       var ext = ext1 + 273.15;
+      console.log("Conversión correcta");
       return ext + " Kelvin";
     }
   }
@@ -64,25 +53,17 @@ function startWorker(valor) {
     this.toCelsius = function()
     {
       var ext = valor - 273.15;
+      console.log("Conversión correcta");
       return ext + " Celsius";
     }
     this.toFahrenheit = function()
     {
       var ext = valor - 273.15;
       var ext1 = (ext*1.8)+32;
+      console.log("Conversión correcta");
       return ext1 + " Fahrenheit";
     }
   }
-  function getValor()
-  {
-    return Temperatura.valor;
-  }
-
-  function setValor(valor)
-  {
-    Temperatura.valor = valor;
-  }
-  
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Kelvin = Kelvin;

@@ -268,3 +268,8 @@ body {
     position: absolute;
   }
 }
+
+#titulo
+{
+  text-align: center;
+}
